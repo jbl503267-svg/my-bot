@@ -5,10 +5,9 @@ import yt_dlp
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
-# حماية المعلومات: سحبها من متغيرات البيئة بأمان (ولو شغال محلي بيقرا القيم الافتراضية)
 API_ID = int(os.getenv("API_ID", "38307644"))
-API_HASH = os.getenv("API_HASH", "549a92a14ae8671d90a7f0daa2503321"))
-BOT_TOKEN = os.getenv("BOT_TOKEN", "9199943100:AAGsBc06mwNKXPyzmXJDixjemd4NkELC7J4"))
+API_HASH = os.getenv("API_HASH", "549a92a14ae8671d90a7f0daa2503321")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "9199943100:AAGsBc06mwNKXPyzmXJDixjemd4NkELC7J4")
 
 app = Client(
     "media_downloader_bot",
@@ -109,7 +108,7 @@ async def handle_download(client: Client, callback_query: CallbackQuery):
         if file_path and os.path.exists(file_path):
             try:
                 os.remove(file_path)
-            } catch:
+            except:
                 pass
 
 print("البوت شغال...")
